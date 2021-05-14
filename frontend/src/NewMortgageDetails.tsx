@@ -4,9 +4,11 @@ import PaymentDisplay from './PaymentDisplay';
 
 interface Props {
   updateMonthlyPayment: (number) => void;
+  updatePrice: (number) => void;
+  updateMortAmount: (number) => void;
 }
 
-const NewMortgageDetails = ({ updateMonthlyPayment }): JSX.Element => {
+const NewMortgageDetails = ({ updateMonthlyPayment, updatePrice, updateMortAmount }): JSX.Element => {
   let mortgageInputFIelds;
 
   const [homePrice, updateHomePrice] = useState<number>(1000000);
@@ -51,6 +53,8 @@ const NewMortgageDetails = ({ updateMonthlyPayment }): JSX.Element => {
 
   useEffect(() => {
     updateMortgageAmount(homePrice - downPaymentVal);
+    updateMortAmount(mortgageAmount)
+    updatePrice(homePrice)
   }, [homePrice, downPaymentVal]);
 
   useEffect(() => {

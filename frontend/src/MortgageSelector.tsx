@@ -5,16 +5,18 @@ import PieChartComponent from './PieChartComponent'
 import TransferTax from './TransferTax'
 
 const MortgageSelector = (): JSX.Element => {
-  const [mortgageAmount, updateAmount] = useState<number>(1000);
+  const [mortgagePaymentAmount, updatePaymentAmount] = useState<number>(1000);
+  const [homePrice, updatePrice] = useState<number>(1000);
+  const [mortgageAmount, updateMortAmount] = useState<number>(1000)
   
  
   return (
     <>
       
-      < NewMortgageDetails updateMonthlyPayment={updateAmount}/>
-      < PaymentDisplay payment = {mortgageAmount} />
+      < NewMortgageDetails updateMonthlyPayment={updatePaymentAmount} updatePrice={updatePrice} updateMortAmount={updateMortAmount}/>
+      < PaymentDisplay payment = {mortgagePaymentAmount} />
       <PieChartComponent />
-      < TransferTax />
+      < TransferTax mortgageAmount={mortgageAmount} homePrice={homePrice}/>
     </>
     
   );
