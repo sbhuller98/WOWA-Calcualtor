@@ -5,7 +5,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 //  term: number;
 //}
 
-const PieChartComponent = ({ payment }: Props): JSX.Element => {
+const PieChartComponent = (): JSX.Element => {
   
   return (
     <PieChart

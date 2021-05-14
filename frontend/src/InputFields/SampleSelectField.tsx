@@ -1,9 +1,14 @@
 import React, { useMemo, useState } from 'react';
 
-const SampleSelectField = (): JSX.Element => {
+interface Props {
+  values: string[]
+}
+
+const SampleSelectField = ( {values}): JSX.Element => {
   const [inputValue, setInputValue] = useState<string>();
+ 
   const options = useMemo(
-    () => [...Array(8).keys()].map((i) => ({ value: i, label: i })),
+    () => values.map((i) => ({ value: i, label: i })),
     []
   );
 
