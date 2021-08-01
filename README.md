@@ -4,7 +4,7 @@ The goal of this project is to introduce you to our tech stack. Our frontend use
 
 ## Task: Create a mortgage rates table and simple calculator
 
-You will need to create and design a full-stack application that shows Canada mortgage rates and allows you to calculate your mortgage payments, essentially recreating the bottom of https://wowa.ca/mortgage-rates-ontario
+You will need to create and design a full-stack application that shows Canada mortgage rates and allows you to calculate your mortgage payments, essentially recreating the  bottom of https://wowa.ca/mortgage-rates-ontario
 
 ![](docs/mortgage_rates_page.PNG)
 
